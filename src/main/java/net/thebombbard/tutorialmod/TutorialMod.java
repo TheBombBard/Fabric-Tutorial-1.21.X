@@ -3,6 +3,7 @@ package net.thebombbard.tutorialmod;
 import net.fabricmc.api.ModInitializer;
 
 import net.thebombbard.tutorialmod.block.ModBlocks;
+import net.thebombbard.tutorialmod.item.ModItemGroups;
 import net.thebombbard.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +14,8 @@ public class TutorialMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+        ModItemGroups.registerItemGroups();
+
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
 	}
